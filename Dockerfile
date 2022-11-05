@@ -9,6 +9,8 @@ RUN pip install --no-cache-dir -r requirements.txt && \
 
 EXPOSE 5000
 
+RUN mkdir /mlflow/mlruns/
+
 ENV BACKEND_URI sqlite:////mlflow/mlflow.db
 ENV ARTIFACT_ROOT /mlflow/artifacts
 
