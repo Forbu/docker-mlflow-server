@@ -11,7 +11,7 @@ EXPOSE 5000
 
 RUN mkdir /mlflow/mlruns/
 
-ENV BACKEND_URI sqlite:////mlflow/mlflow.db
+ENV BACKEND_URI sqlite:///mlflow/mlflow.db
 ENV ARTIFACT_ROOT /mlflow/artifacts
 
 CMD mlflow server --backend-store-uri ${BACKEND_URI} --default-artifact-root ${ARTIFACT_ROOT} --host 0.0.0.0 --port 5000
